@@ -1,52 +1,48 @@
+import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import CardWidgetComp from "../CardWidgetComponent/CardWidgetComponent";
+import "../../main.css";
 
-const NavBarComponent = () => {
+function NavBarComponent() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">fedin</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#inicio">Inicio</Nav.Link>
-            <Nav.Link href="#link">Profesionales</Nav.Link>
-            <NavDropdown title="Tienda" id="basic-nav-tiendan">
-              <NavDropdown.Item href="#action/3.1">
-                Herramientas Manueles
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Herramientas eléctricas
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Materiales de construcción</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Equipos de seguridad</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Soldadura y suministros</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Cerraduras y seguridad</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Suministros de fontanería</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Elecricidad y cableado</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Materiales y suministros para el jardín</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Piiniturería y acabados</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Iluminación</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Equiipo elevación de cargas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Herrajes y tornillería</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Productos químicos y adhesivos</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Equipos de protección personal</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Maquinaria pesada</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Suministros de limpieza industrial</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Herramientas de medición</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Servicios y asesoramiento técnico</NavDropdown.Item>
+    <Navbar expand="lg" className="bg-body-nav">
+      <Container fluid>
+        <Navbar.Brand href="#">Rod'S Designs</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action2">Tienda</Nav.Link>
+            <NavDropdown title="Productos" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Diseños</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">Videos</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Todo
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action5">Todos</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="#">Contacto</Nav.Link>
           </Nav>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success" className="button-search">Search</Button>
+          </Form>
+          <CardWidgetComp />
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-};
+}
 
 export default NavBarComponent;

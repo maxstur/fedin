@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #301a04;
+}
+.bg-body-nav {
+  background-color: #f19236;
+}
+.d-flex{
+  padding-right: 5rem;
+}
+.buttonSearch {
+  color: #301a04;
+  border: #301a04 1px solid;
+}
+.buttonSearch:hover {
+  background-color: #301a04;
+  color: #f19236;
+  
+}
+.me {
+  font-size: 1.4rem;
+  color: #301a04;
+  padding-right: 0.1rem;
+
+}
+.mis-productos {
+  font-size: 1.3rem;
+  padding-right: 0.1rem;
+  color: #301a04;
+}

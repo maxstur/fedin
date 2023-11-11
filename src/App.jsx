@@ -1,11 +1,13 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBarComponent from './components/NavBarComponent/NavBarComponent';
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <div>
-      <NavBarComponent/>
+      <NavBarComponent />
+      <ItemListContainer greeting="Bienvenidos a E-com de Rod'S Designs"/>
     </div>
-  )   
+  );
 }
-export default App 
+export default App;
