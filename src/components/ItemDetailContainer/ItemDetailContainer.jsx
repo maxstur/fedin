@@ -8,7 +8,8 @@ const ItemDetailContainer = ({ product }) => {
         display: "flex",
         flexWrap: "wrap",
         width: "80%",
-        justifyContent: "space-around",
+        margin: "auto",
+        justifyContent: "center",
       }}
     >
       <Card
