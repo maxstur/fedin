@@ -21,7 +21,7 @@ const NavBarComponent = () => {
   return (
     <Navbar expand="lg" className="bg-body-nav">
       <Container fluid>
-        <Navbar.Brand>
+        <Navbar.Brand className="nav-words">
           <Link to={"/"} className="nav-link">
             Rod'S Designs
           </Link>

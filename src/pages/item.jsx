@@ -16,7 +16,7 @@ const item = () => {
       .catch((error) => console.log(error));
   }, [id]);
 
-  return <ItemDetailContainer />;
+  return <ItemDetailContainer product={product} />;
 };
 
 export default item;

@@ -7,21 +7,20 @@ body {
 .bg-body-nav {
   background-color: #f19236;
 }
-.me {
-  font-size: 1.4rem;
-  color: #301a04;
-  padding-right: 0.1rem;
-}
-.mis-productos {
-  font-size: 1.3rem;
-  padding-right: 0.1rem;
-  color: #301a04;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
 .nav-link {
   text-decoration: none;
   color: black;
+}
+.me {
+  font-size: 1.4rem;
+  color: #301a04;
+  padding-right: 0.3rem;
+}
+.mis-productos {
+  font-size: 1.3rem;
+  color: #301a04;
+  padding-right: 8rem;
+}
+.nav-words {
+  padding-left: 8rem;
 }

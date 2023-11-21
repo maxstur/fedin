@@ -6,7 +6,7 @@ const ItemDetailContainer = ({ product }) => {
     <div
       style={{
         display: "flex",
-        flexWrap: "wrap",
+        flexFlow: "row wrap",
         width: "80%",
         margin: "auto",
         justifyContent: "center",
@@ -14,7 +14,7 @@ const ItemDetailContainer = ({ product }) => {
     >
       <Card
         key={product.id}
-        style={{ width: "18rem", margin: "1rem", height: "25rem" }}
+        style={{ width: "28rem", margin: "2rem", height: "35rem", overflow: "hidden" }}
       >
         <Card.Img variant="top" src={product.thumbnail} />
         <Card.Body>
