@@ -10,7 +10,7 @@ const Category = () => {
 
   useEffect(() => {
     axios
-      .get(`https://dummyjson.com/products/${categoryID}`)
+      .get(`https://dummyjson.com/products/category/${categoryID}`)
       .then((res) => {
         setProducts(res.data.products);
       })

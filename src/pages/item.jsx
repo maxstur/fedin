@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 const item = () => {
   const [product, setProduct] = useState({});
-const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     axios
@@ -14,7 +14,7 @@ const {id} = useParams();
         setProduct(res.data);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [id]);
 
   return <ItemDetailContainer />;
 };

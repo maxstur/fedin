@@ -4,6 +4,7 @@ import NavBarComponent from "../components/NavBarComponent/NavBarComponent";
 import Category from "../pages/Category";
 import Item from "../pages/item";
 
+
 const MainRoutes = () => {
   return (
     <Router>

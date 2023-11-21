@@ -9,14 +9,15 @@ const ItemListContainer = ({ products }) => {
         display: "flex",
         flexWrap: "wrap",
         width: "80%",
-        justifyContent: "space-around",
+        margin: "auto",
+        justifyContent: "center",
       }}
     >
       {products.map((product) => {
         return (
           <Card
             key={product.id}
-            style={{ width: "18rem", margin: "1rem", height: "25rem" }}
+            style={{ width: "18rem", margin: "1rem", height: "28rem"}}
           >
             <Link to={`../item/${product.id}`}><Card.Img variant="top" src={product.thumbnail} /></Link>
             <Card.Body>
