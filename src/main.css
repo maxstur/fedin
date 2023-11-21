@@ -30,3 +30,8 @@ body {
   padding-right: 0.1rem;
   color: #301a04;
 }
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
