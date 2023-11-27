@@ -7,7 +7,7 @@ import CardWidgetComp from "../CardWidgetComponent/CardWidgetComponent";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "../../main.css";
+import "./NavBarComponent.css";
 
 const NavBarComponent = () => {
   const [categories, setCategories] = useState([]);
