@@ -1,0 +1,59 @@
+#myProgress {
+  width: 190px;
+  max-width: 250px;
+  background: #f4f4f4;
+  box-shadow: inset -1px 1px 2px rgba(200, 200, 200, 0.2),
+    inset 1px -1px 2px rgba(200, 200, 200, 0.2),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.9),
+    inset 1px 1px 3px rgba(200, 200, 200, 0.9);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background: #103357;
+  border-radius: 28px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  transition: 0.5s;
+  animation: loading82341 10s ease infinite;
+}
+
+@keyframes loading82341 {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 10%;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  60% {
+    width: 60%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.loaderSpan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemLoader {
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

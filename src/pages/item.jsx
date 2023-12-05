@@ -1,22 +1,46 @@
 import React, { useEffect, useState } from "react";
-import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
+import "./Item.css";
 
-const item = () => {
+const Item = () => {
   const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
-    axios
-      .get(`https://dummyjson.com/products/${id}`)
-      .then((res) => {
-        setProduct(res.data);
-      })
-      .catch((error) => console.log(error));
+    const timerId = setTimeout(() => {
+      axios
+        .get(`https://dummyjson.com/products/${id}`)
+        .then((res) => {
+          setProduct(res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }, 2000);
+
+    return () => clearTimeout(timerId);
   }, [id]);
 
-  return <ItemDetailContainer product={product} />;
+  return (
+    <div className="itemLoader">
+      {loading ? (
+        <div>
+          <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+          <span className="loaderSpan">Cargando...</span>
+        </div>
+      ) : (
+        <ItemDetailContainer product={product} />
+      )}
+    </div>
+  );
 };
 
-export default item;
+export default Item;
