@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
-import "./Item.css";
+import LoaderComponent from "../components/LoaderComponent/LoaderComponent";
+
 
 const Item = () => {
   const [product, setProduct] = useState({});
@@ -28,14 +29,9 @@ const Item = () => {
   }, [id]);
 
   return (
-    <div className="itemLoader">
+    <div>
       {loading ? (
-        <div>
-          <div id="myProgress">
-            <div id="myBar"></div>
-          </div>
-          <span className="loaderSpan">Cargando...</span>
-        </div>
+        <LoaderComponent />
       ) : (
         <ItemDetailContainer product={product} />
       )}
