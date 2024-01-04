@@ -1,0 +1,8 @@
+.item-detail-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  max-width: 35rem;
+  margin: 2rem auto;
+  justify-content: center;
+}

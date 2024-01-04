@@ -1,0 +1,8 @@
+.item-list-container {
+    display: "flex",
+    flexWrap "wrap",
+    width "80%",
+    margin "auto",
+    marginTop "2rem",
+    justifyContent "center",
+  }
